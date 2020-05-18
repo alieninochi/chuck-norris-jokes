@@ -1,0 +1,17 @@
+body {
+    width: 100%;
+}
+
+#header #logo {
+    position: absolute;
+    left: 8.75em;
+    top: 2.75em;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 1.25em;
+    margin: 4px 0;
+}
+
+h1 {
+    position: absolute;
+}
