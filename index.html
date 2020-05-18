@@ -7,29 +7,59 @@
     <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-    <header id="header">
-        <span id="logo">MSI 2020</span>
+    <header class="header">
+        <span class="logo">MSI 2020</span>
     </header>
 
-    <main id="main">
-        <h1>Hey!</h1>
-        <h2>Let's try to find a joke for you</h2>
+    <main class="main">
+        <div class="base">
+            <h1 class="main-header">Hey!</h1>
+            <h2 class="subheader">Let's try to find a joke for you</h2>
 
-        <form action="#">
-            <input type="radio" name="criteria" id="random" value="random">
-            <label for="random">Random</label>
+            <form action="#" class="search-form">
+                <label for="random" class="btn-labels">
+                    <input type="radio" name="criteria" id="random" value="random" class="radio-btn">
+                    Random
+                </label>
 
-            <input type="radio" name="criteria" id="category" value="category">
-            <label for="category">From categories</label>
+                <label for="category" class="btn-labels">
+                    <input type="radio" name="criteria" id="category" value="category" class="radio-btn">
+                    From categories
+                </label>
 
-            <input type="radio" name="criteria" id="search" value="search">
-            <label for="search">Search</label>
+<!--                <div class="categories">-->
+<!--                    <label for="animal" class="checkboxes">-->
+<!--                        <input type="radio" name="category" id="animal" class="category-btn">-->
+<!--                        <span class="category">Animal</span>-->
+<!--                    </label>-->
 
-            <input type="submit" value="Get a joke">
-        </form>
+<!--                    <label for="career" class="checkboxes">-->
+<!--                        <input type="radio" name="category" id="career" class="category-btn">-->
+<!--                        <span class="category">Career</span>-->
+<!--                    </label>-->
 
-        <div id="favourite">
-            <h2 id="favourite-header">Favourite</h2>
+<!--                    <label for="celebrity" class="checkboxes">-->
+<!--                        <input type="radio" name="category" id="celebrity" class="category-btn">-->
+<!--                        <span class="category">Celebrity</span>-->
+<!--                    </label>-->
+
+<!--                    <label for="dev" class="checkboxes">-->
+<!--                        <input type="radio" name="category" id="dev" class="category-btn">-->
+<!--                        <span class="category">Dev</span>-->
+<!--                    </label>-->
+<!--                </div>-->
+
+                <label for="search" class="btn-labels">
+                    <input type="radio" name="criteria" id="search" value="search" class="radio-btn">
+                    Search
+                </label>
+
+                <input type="submit" value="Get a joke">
+            </form>
+        </div>
+
+        <div class="favourite">
+            <h2 class="favourite-header">Favourite</h2>
         </div>
     </main>
 </body>
