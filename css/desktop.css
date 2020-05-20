@@ -65,7 +65,9 @@ h1, h2 {
 }
 
 .radio-btn:checked {
-    border: 6px solid #333333;
+    border: 2px solid #333333;
+    background-color: #333333;
+    box-shadow: 0 0 0 3px #fff inset;
 }
 
 .btn-labels {
@@ -74,16 +76,43 @@ h1, h2 {
     font-size: 1.125em;
 }
 
-/*.categories {*/
-/*    margin: 1.25em 0;*/
-/*}*/
+.categories {
+    margin: 1.25em 0;
+}
 
-/*@supports(-webkit-appearance: none) or (-moz-appearance: none) {*/
-/*    .category-btn {*/
-/*        -webkit-appearance: none;*/
-/*        -moz-appearance: none;*/
-/*    }*/
-/*}*/
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+    .category-btn {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+}
+
+.category-btn {
+    margin: 0;
+    padding: 0;
+}
+
+.category {
+    width: 85px;
+    height: 28px;
+    margin: 0;
+    padding-top: 6px;
+    display: inline-block;
+    border: 2px solid #f8f8f8;
+    border-radius: 6px;
+    color: #ababab;
+    font-size: 0.75em;
+    font-weight: 500;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.category-btn:checked + .category {
+    color: #333333;
+    background-color: #f8f8f8;
+}
 
 input[type="submit"] {
     margin-top: 1.25em;
