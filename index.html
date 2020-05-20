@@ -4,7 +4,8 @@
     <meta name="viewport" content="width = device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Chuck Norris Jokes</title>
-    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header class="header">
@@ -17,15 +18,18 @@
             <h2 class="subheader">Let's try to find a joke for you</h2>
 
             <form action="#" class="search-form">
+                <input type="radio" name="criteria" id="random" value="random" class="radio-btn">
                 <label for="random" class="btn-labels">
-                    <input type="radio" name="criteria" id="random" value="random" class="radio-btn">
                     Random
                 </label>
+                <br>
 
+                <input type="radio" name="criteria" id="category" value="category" class="radio-btn">
                 <label for="category" class="btn-labels">
-                    <input type="radio" name="criteria" id="category" value="category" class="radio-btn">
+
                     From categories
                 </label>
+                <br>
 
                 <div class="categories">
                     <label for="animal" class="category-label">
@@ -49,10 +53,13 @@
                     </label>
                 </div>
 
+                <input type="radio" name="criteria" id="search" value="search" class="radio-btn">
                 <label for="search" class="btn-labels">
-                    <input type="radio" name="criteria" id="search" value="search" class="radio-btn">
                     Search
                 </label>
+
+                <input type="text" name="search" id="search-form" class="search" placeholder="Free text search...">
+                <label for="search-form"></label>
 
                 <input type="submit" value="Get a joke">
             </form>
