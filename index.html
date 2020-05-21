@@ -61,13 +61,26 @@
                 <input type="text" name="search" id="search-form" class="search" placeholder="Free text search...">
                 <label for="search-form"></label>
 
-                <input type="submit" value="Get a joke">
+                <input type="submit" value="Get a joke" id="get-joke">
             </form>
         </div>
 
-        <div class="favourite">
+        <div class="favourite-menu">
+            <input type="checkbox" name="menu-btn" id="menu-btn">
+
+            <label for="menu-btn" class="menu-button">
+                <span class="hamburger">
+                    <span class="hamburger-element"></span>
+                    <span class="hamburger-element"></span>
+                </span>
+            </label>
+
             <h2 class="favourite-header">Favourite</h2>
+            <div class="favourite">
+            </div>
         </div>
     </main>
+
+    <script src="./js/change-styles.js"></script>
 </body>
 </html>

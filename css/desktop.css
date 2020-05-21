@@ -117,7 +117,7 @@ h1, h2, p {
     border: 2px solid var(--lightgrey);
     border-radius: 6px;
     color: var(--darkgrey);
-    font-size: 0.75em;
+    font-size: .75em;
     font-weight: 500;
     line-height: 1em;
     text-transform: uppercase;
@@ -134,7 +134,7 @@ h1, h2, p {
     display: none;
     width: 50vw;
     margin-top: 1.25em;
-    padding: 0.625em 1em;
+    padding: .625em 1em;
     border: 2px solid var(--black);
     border-radius: 10px;
     font-size: 1em;
@@ -147,7 +147,7 @@ h1, h2, p {
 input[type="submit"] {
     display: block;
     margin-top: 1.25em;
-    padding: 0.625em 2.5em;
+    padding: .625em 2.5em;
     background: linear-gradient(92.01deg, #8EA7FF 0%, #7291FF 100%);
     border: none;
     border-radius: 10px;
@@ -156,7 +156,20 @@ input[type="submit"] {
     color: #fff;
 }
 
+.favourite-menu {
+    width: 34vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 66%;
+}
+
+#menu-btn {
+     display: none;
+ }
+
 .favourite {
+    z-index: 0;
     width: 34vw;
     height: 100vh;
     position: fixed;
@@ -166,6 +179,9 @@ input[type="submit"] {
 }
 
 .favourite-header {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
     margin-top: 2em;
     margin-left: 2em;
     font-size: 1.25em;

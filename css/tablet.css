@@ -1,0 +1,104 @@
+@media screen and (max-width: 1024px) {
+    .base {
+        width: 75vw;
+    }
+
+    .search {
+        width: 75vw;
+    }
+
+    .favourite-menu {
+        width: 30vw;
+        left: 70%;
+    }
+
+    #menu-btn {
+        display: none;
+        position: relative;
+        z-index: 1;
+        margin-left: 1.5em;
+        left: 30%;
+    }
+
+    .favourite-header {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        margin-top: 2em;
+        margin-left: 1.5em;
+        font-size: 1.25em;
+        line-height: 1.75em;
+        color: var(--darkgrey);
+        left: 30%;
+    }
+
+    .favourite {
+        opacity: 0;
+        width: 55vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        transition: .5s;
+    }
+
+    #menu-btn:checked ~ .favourite {
+        opacity: 1;
+        transform-origin: 0 0;
+        transform: translate(-100%, 0%);
+        transition: transform .5s cubic-bezier(1,.33,0,.7);
+    }
+
+    .menu-button {
+        display: block;
+        border-radius: 50%;
+        background: #333333;
+        width: 1.75em;
+        height: 1.75em;
+        padding: 0;
+        margin-right: .3em;
+        position: absolute;
+        top: 2.5em;
+        left: 25%;
+        z-index: 1;
+    }
+
+    .hamburger {
+        display: block;
+        margin-left: .45em;
+        margin-top: .625em;
+    }
+
+    .hamburger-element {
+        display: block;
+        width: .875em;
+        height: .125em;
+        background: white;
+        margin-bottom: .375em;
+        border-radius: .125em;
+        transform-origin: .25em 0;
+        transition: transform .5s cubic-bezier(.77,.2,.05,1.0),
+        background 0.5s cubic-bezier(.77,.2,.05,1.0),
+        opacity 0.55s ease;
+    }
+
+    .hamburger-element:first-child {
+        transform-origin: 0 0;
+    }
+
+    .hamburger-element:last-child {
+        transform-origin: 0 100%
+    }
+
+    #menu-btn:checked + .menu-button > .hamburger > .hamburger-element {
+        transform: rotate(45deg) translate(-2px, -1px);
+    }
+
+    #menu-btn:checked + .menu-button > .hamburger > .hamburger-element:last-child {
+        transform: rotate(-45deg) translate(0px, -1px);
+    }
+
+    #menu-btn:checked + .menu-button > .hamburger {
+        margin-left: .625em;
+    }
+}

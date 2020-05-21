@@ -1,0 +1,32 @@
+@media screen and (max-width: 600px) {
+    .favourite-menu {
+        width: 50vw;
+        left: 50%;
+    }
+
+    #menu-btn {
+        left: 20%;
+    }
+
+    .menu-button {
+        left: 20%;
+    }
+
+    .favourite-header {
+        left: 25%;
+    }
+
+    .favourite {
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #menu-btn {
+        left: 0;
+    }
+
+    .favourite-header {
+        left: 0;
+    }
+}
