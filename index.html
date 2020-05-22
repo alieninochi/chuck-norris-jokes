@@ -17,7 +17,7 @@
             <h1 class="main-header">Hey!</h1>
             <h2 class="subheader">Let's try to find a joke for you</h2>
 
-            <form action="#" class="search-form">
+            <div class="search-form">
                 <input type="radio" name="criteria" id="random" value="random" class="radio-btn">
                 <label for="random" class="btn-labels">
                     Random
@@ -61,8 +61,13 @@
                 <input type="text" name="search" id="search-form" class="search" placeholder="Free text search...">
                 <label for="search-form"></label>
 
-                <input type="submit" value="Get a joke" id="get-joke">
-            </form>
+<!--                <input type="submit" value="Get a joke" id="get-joke">-->
+                <button id="get-joke">Get a joke</button>
+            </div>
+        </div>
+
+        <div class="joke">
+
         </div>
 
         <div class="favourite-menu">
@@ -82,5 +87,6 @@
     </main>
 
     <script src="./js/change-styles.js"></script>
+    <script src="./js/api.js"></script>
 </body>
 </html>

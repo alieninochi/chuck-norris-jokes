@@ -144,7 +144,7 @@ h1, h2, p {
     display: block;
 }
 
-input[type="submit"] {
+#get-joke {
     display: block;
     margin-top: 1.25em;
     padding: .625em 2.5em;
@@ -157,7 +157,7 @@ input[type="submit"] {
 }
 
 .favourite-menu {
-    width: 34vw;
+    width: 33vw;
     height: 100vh;
     position: absolute;
     top: 0;
@@ -192,8 +192,7 @@ input[type="submit"] {
 .joke {
     display: none;
     overflow-x: hidden;
-    width: 50%;
-    height: 225px;
+    width: 50vw;
     position: relative;
     left: 10%;
     top: 5em;
@@ -212,6 +211,10 @@ input[type="submit"] {
     font-size: .625em;
     line-height: .875em;
     padding-top: 6.7em;
+}
+
+.id-url {
+    color: #8ea7ff;
 }
 
 .joke-text {
