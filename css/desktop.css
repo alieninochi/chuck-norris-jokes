@@ -1,249 +1,190 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-    --black: #333333;
-    --darkgrey: #ababab;
-    --lightgrey: #f8f8f8;
+  --black: #333333;
+  --darkgrey: #ababab;
+  --lightgrey: #f8f8f8;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-family: Roboto, sans-serif;
-    color: var(--black);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: Roboto, sans-serif;
+  color: var(--black);
 }
 
 h1, h2, p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
-    display: inline-block;
-    position: relative;
-    top: 2.5em;
-    left: 10%;
+  display: inline-block;
+  position: relative;
+  top: 2.5em;
+  left: 10%;
 }
 
 .logo {
-    font-weight: bold;
-    font-size: 1.25em;
-    line-height: 1.75em;
+  font-weight: bold;
+  font-size: 1.25em;
+  line-height: 1.75em;
 }
 
 .main {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .main-header {
-    margin-top: 4.875rem;
+  margin-top: 4.875rem;
 }
 
 .base {
-    width: 50vw;
-    position: relative;
-    top: 2.5em;
-    left: 10%;
+  width: 50vw;
+  position: relative;
+  top: 2.5em;
+  left: 10%;
 }
 
 .search-form {
-    margin-top: 2.5em;
+  margin-top: 2.5em;
 }
 
 @supports(-webkit-appearance: none) or (-moz-appearance: none) {
-    .radio-btn {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-    }
+  .radio-btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
 }
 
 .radio-btn {
-    margin: 0.75em 1em 0 0;
-    padding: 0;
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--darkgrey);
-    border-radius: 50%;
-    vertical-align: middle;
+  margin: 0.75em 1em 0 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--darkgrey);
+  border-radius: 50%;
+  vertical-align: middle;
 }
 
 .radio-btn:checked {
-    border: 2px solid #333333;
-    background-color: #333333;
-    box-shadow: 0 0 0 3px #fff inset;
+  border: 2px solid #333333;
+  background-color: #333333;
+  box-shadow: 0 0 0 3px #fff inset;
 }
 
 .btn-labels {
-    display: inline-block;
-    margin: 0;
-    padding-top: 0.625em;
-    font-size: 1.125em;
-    line-height: 1.625em;
-    vertical-align: middle;
+  display: inline-block;
+  margin: 0;
+  padding-top: 0.625em;
+  font-size: 1.125em;
+  line-height: 1.625em;
+  vertical-align: middle;
 }
 
 .categories {
-    margin: 1.25em 0;
-    display: none;
+  margin: 1.25em 0;
+  display: none;
 }
 
 #category:checked ~ .categories {
-    display: block;
+  display: block;
 }
 
 @supports(-webkit-appearance: none) or (-moz-appearance: none) {
-    .category-btn {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-    }
+  .category-btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
 }
 
 .category-btn {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .category {
-    width: 85px;
-    height: 28px;
-    margin: 0;
-    padding-top: 6px;
-    display: inline-block;
-    border: 2px solid var(--lightgrey);
-    border-radius: 6px;
-    color: var(--darkgrey);
-    font-size: .75em;
-    font-weight: 500;
-    line-height: 1em;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 2px;
+  width: 85px;
+  height: 28px;
+  margin: 0;
+  padding-top: 6px;
+  display: inline-block;
+  border: 2px solid var(--lightgrey);
+  border-radius: 6px;
+  color: var(--darkgrey);
+  font-size: .75em;
+  font-weight: 500;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
 }
 
 .category-btn:checked + .category {
-    color: var(--black);
-    background-color: var(--lightgrey);
+  color: var(--black);
+  background-color: var(--lightgrey);
 }
 
 .search {
-    display: none;
-    width: 50vw;
-    margin-top: 1.25em;
-    padding: .625em 1em;
-    border: 2px solid var(--black);
-    border-radius: 10px;
-    font-size: 1em;
+  display: none;
+  width: 50vw;
+  margin-top: 1.25em;
+  padding: .625em 1em;
+  border: 2px solid var(--black);
+  border-radius: 10px;
+  font-size: 1em;
 }
 
 #search:checked ~ .search {
-    display: block;
+  display: block;
 }
 
 #get-joke {
-    display: block;
-    margin-top: 1.25em;
-    padding: .625em 2.5em;
-    background: linear-gradient(92.01deg, #8EA7FF 0%, #7291FF 100%);
-    border: none;
-    border-radius: 10px;
-    font-size: 1em;
-    font-weight: bold;
-    color: #fff;
+  display: block;
+  margin-top: 1.25em;
+  padding: .625em 2.5em;
+  background: linear-gradient(92.01deg, #8EA7FF 0%, #7291FF 100%);
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
 }
 
 .favourite-menu {
-    width: 33vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 66%;
+  width: 33vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 66%;
 }
 
 #menu-btn {
-     display: none;
- }
+  display: none;
+}
 
 .favourite {
-    z-index: 0;
-    width: 34vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 66%;
-    background-color: var(--lightgrey);
+  z-index: 0;
+  width: 34vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 66%;
+  background-color: var(--lightgrey);
 }
 
 .favourite-header {
-    display: inline-block;
-    position: relative;
-    z-index: 2;
-    margin-top: 2em;
-    margin-left: 2em;
-    font-size: 1.25em;
-    line-height: 1.75em;
-    color: var(--darkgrey);
-}
-
-.joke {
-    display: none;
-    overflow-x: hidden;
-    width: 50vw;
-    position: relative;
-    left: 10%;
-    top: 5em;
-    background-color: var(--lightgrey);
-    border-radius: 20px;
-}
-
-.joke-id, .joke-text, .joke-last-update {
-    position: relative;
-    left: 15%;
-}
-
-.joke-id {
-    display: inline-block;
-    color: var(--darkgrey);
-    font-size: .625em;
-    line-height: .875em;
-    padding-top: 6.7em;
-}
-
-.id-url {
-    color: #8ea7ff;
-}
-
-.joke-text {
-    width: 80%;
-    font-size: 1.125em;
-    line-height: 1.625em;
-    padding-top: .5em;
-}
-
-.joke-last-update {
-    display: inline-block;
-    padding-top: 2.8em;
-    color: var(--darkgrey);
-    font-size: .625em;
-    line-height: .875em;
-}
-
-.joke-category {
-    width: 15%;
-    position: absolute;
-    left: 80%;
-    top: 16em;
-    padding: 1em;
-    background-color: #fff;
-    border-radius: 6px;
-    font-size: .625em;
-    line-height: .875em;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-align: center;
-    vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  margin-top: 2em;
+  margin-left: 2em;
+  font-size: 1.25em;
+  line-height: 1.75em;
+  color: var(--darkgrey);
 }

@@ -1,92 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width = device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <title>Chuck Norris Jokes</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width = device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Chuck Norris Jokes</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header class="header">
-        <span class="logo">MSI 2020</span>
-    </header>
+<header class="header">
+  <span class="logo">MSI 2020</span>
+</header>
 
-    <main class="main">
-        <div class="base">
-            <h1 class="main-header">Hey!</h1>
-            <h2 class="subheader">Let's try to find a joke for you</h2>
+<main class="main">
+  <div class="base">
+    <h1 class="main-header">Hey!</h1>
+    <h2 class="subheader">Let's try to find a joke for you</h2>
 
-            <div class="search-form">
-                <input type="radio" name="criteria" id="random" value="random" class="radio-btn">
-                <label for="random" class="btn-labels">
-                    Random
-                </label>
-                <br>
+    <div class="search-form">
+      <input type="radio" name="criteria" id="random" value="random" class="radio-btn">
+      <label for="random" class="btn-labels">
+        Random
+      </label>
+      <br>
 
-                <input type="radio" name="criteria" id="category" value="category" class="radio-btn">
-                <label for="category" class="btn-labels">
+      <input type="radio" name="criteria" id="category" value="category" class="radio-btn">
+      <label for="category" class="btn-labels">
 
-                    From categories
-                </label>
-                <br>
+        From categories
+      </label>
+      <br>
 
-                <div class="categories">
-                    <label for="animal" class="category-label">
-                        <input type="radio" name="category" id="animal" class="category-btn">
-                        <span class="category">Animal</span>
-                    </label>
+      <div class="categories">
+        <label for="animal" class="category-label">
+          <input type="radio" name="category" id="animal" class="category-btn">
+          <span class="category">Animal</span>
+        </label>
 
-                    <label for="career" class="category-label">
-                        <input type="radio" name="category" id="career" class="category-btn">
-                        <span class="category">Career</span>
-                    </label>
+        <label for="career" class="category-label">
+          <input type="radio" name="category" id="career" class="category-btn">
+          <span class="category">Career</span>
+        </label>
 
-                    <label for="celebrity" class="category-label">
-                        <input type="radio" name="category" id="celebrity" class="category-btn">
-                        <span class="category">Celebrity</span>
-                    </label>
+        <label for="celebrity" class="category-label">
+          <input type="radio" name="category" id="celebrity" class="category-btn">
+          <span class="category">Celebrity</span>
+        </label>
 
-                    <label for="dev" class="category-label">
-                        <input type="radio" name="category" id="dev" class="category-btn">
-                        <span class="category">Dev</span>
-                    </label>
-                </div>
+        <label for="dev" class="category-label">
+          <input type="radio" name="category" id="dev" class="category-btn">
+          <span class="category">Dev</span>
+        </label>
+      </div>
 
-                <input type="radio" name="criteria" id="search" value="search" class="radio-btn">
-                <label for="search" class="btn-labels">
-                    Search
-                </label>
+      <input type="radio" name="criteria" id="search" value="search" class="radio-btn">
+      <label for="search" class="btn-labels">
+        Search
+      </label>
 
-                <input type="text" name="search" id="search-form" class="search" placeholder="Free text search...">
-                <label for="search-form"></label>
+      <input type="text" name="search" id="search-form" class="search" placeholder="Free text search...">
+      <label for="search-form"></label>
 
-<!--                <input type="submit" value="Get a joke" id="get-joke">-->
-                <button id="get-joke">Get a joke</button>
-            </div>
-        </div>
+      <!--                <input type="submit" value="Get a joke" id="get-joke">-->
+      <button id="get-joke">Get a joke</button>
+    </div>
+  </div>
 
-        <div class="joke">
+  <div class="favourite-menu">
+    <input type="checkbox" name="menu-btn" id="menu-btn">
 
-        </div>
+    <label for="menu-btn" class="menu-button">
+      <span class="hamburger">
+        <span class="hamburger-element"></span>
+        <span class="hamburger-element"></span>
+      </span>
+    </label>
 
-        <div class="favourite-menu">
-            <input type="checkbox" name="menu-btn" id="menu-btn">
+    <h2 class="favourite-header">Favourite</h2>
+    <div class="favourite">
+    </div>
+  </div>
 
-            <label for="menu-btn" class="menu-button">
-                <span class="hamburger">
-                    <span class="hamburger-element"></span>
-                    <span class="hamburger-element"></span>
-                </span>
-            </label>
+  <div class="joke-container"></div>
+</main>
 
-            <h2 class="favourite-header">Favourite</h2>
-            <div class="favourite">
-            </div>
-        </div>
-    </main>
-
-    <script src="./js/change-styles.js"></script>
-    <script src="./js/api.js"></script>
+<script src="./src/change-styles.js"></script>
+<script src="./dist/main.js"></script>
 </body>
 </html>

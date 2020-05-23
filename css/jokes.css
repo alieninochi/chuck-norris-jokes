@@ -1,0 +1,57 @@
+.joke {
+    overflow-x: hidden;
+    width: 50vw;
+    position: relative;
+    left: 10%;
+    top: 5em;
+    background-color: maroon;
+    border-radius: 20px;
+}
+
+.joke-id, .joke-text, .joke-last-update {
+    position: relative;
+    left: 15%;
+}
+
+.joke-id {
+    display: inline-block;
+    color: var(--darkgrey);
+    font-size: .625em;
+    line-height: .875em;
+    padding-top: 6.7em;
+}
+
+.id-url {
+    color: #8ea7ff;
+}
+
+.joke-text {
+    width: 80%;
+    font-size: 1.125em;
+    line-height: 1.625em;
+    padding-top: .5em;
+}
+
+.joke-last-update {
+    display: inline-block;
+    padding-top: 2.8em;
+    color: var(--darkgrey);
+    font-size: .625em;
+    line-height: .875em;
+}
+
+.joke-category {
+    width: 15%;
+    position: absolute;
+    left: 80%;
+    top: 16em;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 6px;
+    font-size: .625em;
+    line-height: .875em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+}
