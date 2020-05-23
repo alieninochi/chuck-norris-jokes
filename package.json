@@ -1,0 +1,42 @@
+{
+  "name": "chuck-norris-jokes",
+  "version": "1.0.0",
+  "description": "The applications that allows to get random jokes from Chuck Norris Jokes API",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "debug": "npm run webpack -- --inspect --debug-brk",
+    "dev": "npm run webpack -- --mode development",
+    "prod": "npm run webpack -- --mode production",
+    "dev:debug": "npm run debug -- --mode development",
+    "dev:prod": "npm run debug -- --production development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alieninochi/chuck-norris-jokes.git"
+  },
+  "keywords": [
+    "api",
+    "jokes",
+    "chuck norris"
+  ],
+  "author": "Zoe Holubkova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alieninochi/chuck-norris-jokes/issues"
+  },
+  "homepage": "https://github.com/alieninochi/chuck-norris-jokes#readme",
+  "dependencies": {
+    "webpack": "^4.43.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "prettier": "^2.0.5",
+    "webpack-cli": "^3.3.11"
+  }
+}
