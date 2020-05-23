@@ -1,50 +1,89 @@
-.joke {
-    overflow-x: hidden;
-    width: 50vw;
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.not-found-msg {
+    display: inline-block;
     position: relative;
     left: 10%;
     top: 5em;
-    background-color: maroon;
-    border-radius: 20px;
+    font-size: 1.25em;
 }
 
-.joke-id, .joke-text, .joke-last-update {
+.fav-btn {
+    position: absolute;
+    right: 10%;
+    top: 2.5em;
+}
+
+.fav {
+    display: none;
+}
+
+.static-icon {
+    position: absolute;
+    left: 10%;
+    top: 4em;
+}
+
+.joke {
+    font-family: Roboto,sans-serif;
+    width: 50vw;
+    height: fit-content;
     position: relative;
-    left: 15%;
+    left: 10%;
+    top: 5em;
+    background-color: var(--lightgrey);
+    border-radius: 20px;
+    padding-bottom: 3em;
+    margin-bottom: 1.25em;
 }
 
 .joke-id {
-    display: inline-block;
-    color: var(--darkgrey);
+    position: relative;
+    left: 20%;
+    top: 6.5em;
     font-size: .625em;
-    line-height: .875em;
-    padding-top: 6.7em;
+    color: var(--darkgrey);
 }
 
-.id-url {
-    color: #8ea7ff;
+.joke-id a {
+    color: #7291FF;
+}
+
+.link-icon {
+    display: inline-block;
+    margin-bottom: -0.2em;
+    padding-left: .5em;
 }
 
 .joke-text {
-    width: 80%;
+    width: 75%;
+    position: relative;
+    left: 20%;
+    top: 4em;
     font-size: 1.125em;
-    line-height: 1.625em;
-    padding-top: .5em;
 }
 
 .joke-last-update {
-    display: inline-block;
-    padding-top: 2.8em;
-    color: var(--darkgrey);
+    position: relative;
+    left: 20%;
+    top: 6.5em;
+    margin: 3em 0 5em 0;
     font-size: .625em;
-    line-height: .875em;
+    color: var(--darkgrey);
 }
 
 .joke-category {
     width: 15%;
     position: absolute;
     left: 80%;
-    top: 16em;
+    bottom: 2em;
     padding: 1em;
     background-color: #fff;
     border-radius: 6px;

@@ -6,6 +6,8 @@ function createJokeSpace(res) {
   jokeSpace.classList.add("joke");
   jokeContainer.prepend(jokeSpace);
 
+  createFavIcon();
+  createIcon();
   getJokeId(res.url, res.id);
   getJokeText(res.value);
   getLastUpdate(res["updated_at"]);
@@ -17,47 +19,95 @@ function createJokeSpace(res) {
   }
 }
 
+function createFavIcon() {
+  const favButton = document.createElement("div");
+  favButton.classList.add("fav-btn");
+  jokeSpace.append(favButton);
+
+  const input = document.createElement("input");
+  input.type = "checkbox";
+  input.name = "fav";
+  input.id = "fav";
+  input.classList.add("fav");
+  favButton.append(input);
+
+  const label = document.createElement("label");
+  label.setAttribute("for", "fav");
+  favButton.append(label);
+
+  const heart = document.createElement("img");
+  heart.src = "./img/heart.svg";
+  heart.alt = "add to favourite";
+  heart.classList.add("heart");
+  label.append(heart);
+
+  input.addEventListener("click", () => {
+    if (input.checked) {
+      console.log(input.checked);
+      heart.style.backgroundImage = 'url("../img/heart-filled.svg")';
+    } else {
+      heart.style.backgroundImage = "none";
+    }
+  });
+}
+
+function createIcon() {
+  const icon = document.createElement("img");
+  icon.src = "./img/static-icon.svg";
+  icon.alt = "icon";
+  icon.classList.add("static-icon");
+
+  jokeSpace.append(icon);
+}
+
 function getJokeId(url, id) {
-  let jokeId = document.createElement("p");
+  const jokeId = document.createElement("p");
   jokeId.innerHTML = "ID: ";
   jokeId.classList.add("joke-id");
 
   jokeSpace.appendChild(jokeId);
 
-  let idUrl = document.createElement("a");
+  const idUrl = document.createElement("a");
   idUrl.href = url;
   idUrl.innerHTML = id;
   idUrl.classList.add("id-url");
 
-  jokeId.appendChild(idUrl);
+  jokeId.append(idUrl);
+
+  const link = document.createElement("img");
+  link.src = "./img/link.svg";
+  link.alt = "link";
+  link.classList.add("link-icon");
+  idUrl.append(link);
 }
 
 function getJokeText(text) {
-  let jokeText = document.createElement("p");
+  const jokeText = document.createElement("p");
   jokeText.innerHTML = text;
   jokeText.classList.add("joke-text");
 
-  jokeSpace.appendChild(jokeText);
+  jokeSpace.append(jokeText);
 }
 
 function getLastUpdate(time) {
-  let newTime = new Date();
-  newTime.setTime(Date.parse(time));
-  newTime = Math.round((+new Date() - newTime) / 3.6e6);
+  // Determine how many hours ago the joke was changed
+  let hours = new Date();
+  hours.setTime(Date.parse(time));
+  hours = Math.round((+new Date() - hours) / 3.6e6);
 
-  let jokeUpdate = document.createElement("p");
-  jokeUpdate.innerHTML = `Last update: ${newTime} hours ago`;
+  const jokeUpdate = document.createElement("p");
+  jokeUpdate.innerHTML = `Last update: ${hours} hours ago`;
   jokeUpdate.classList.add("joke-last-update");
 
-  jokeSpace.appendChild(jokeUpdate);
+  jokeSpace.append(jokeUpdate);
 }
 
 function getJokeCategory(category) {
-  let jokeCategory = document.createElement("div");
+  const jokeCategory = document.createElement("div");
   jokeCategory.innerHTML = category[0];
   jokeCategory.classList.add("joke-category");
 
-  jokeSpace.appendChild(jokeCategory);
+  jokeSpace.append(jokeCategory);
 }
 
 export { createJokeSpace, jokeContainer };
