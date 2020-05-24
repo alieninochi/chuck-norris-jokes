@@ -16,13 +16,26 @@ p {
 }
 
 .fav-btn {
+    width: 3em;
+    height: 3em;
     position: absolute;
     right: 10%;
     top: 2.5em;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.fav {
-    display: none;
+.fav-btn:hover {
+    background-color: rgba(248, 145, 145, 0.5);
+    transition: 0.5s;
+}
+
+.heart {
+    background: url("../img/heart-filled.svg");
 }
 
 .static-icon {
@@ -46,6 +59,7 @@ p {
 
 .joke-id {
     position: relative;
+    width: 75%;
     left: 20%;
     top: 6.5em;
     font-size: .625em;
@@ -71,6 +85,7 @@ p {
 }
 
 .joke-last-update {
+    display: inline-block;
     position: relative;
     left: 20%;
     top: 6.5em;
@@ -93,4 +108,10 @@ p {
     text-transform: uppercase;
     text-align: center;
     vertical-align: middle;
+}
+
+@media screen and (max-width: 1024px) {
+    .joke {
+        width: 80vw;
+    }
 }

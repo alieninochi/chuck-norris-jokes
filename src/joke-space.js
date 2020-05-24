@@ -20,35 +20,16 @@ function createJokeSpace(res) {
 }
 
 function createFavIcon() {
-  const favButton = document.createElement("div");
+  const favButton = document.createElement("button");
   favButton.classList.add("fav-btn");
   jokeSpace.append(favButton);
-
-  const input = document.createElement("input");
-  input.type = "checkbox";
-  input.name = "fav";
-  input.id = "fav";
-  input.classList.add("fav");
-  favButton.append(input);
-
-  const label = document.createElement("label");
-  label.setAttribute("for", "fav");
-  favButton.append(label);
 
   const heart = document.createElement("img");
   heart.src = "./img/heart.svg";
   heart.alt = "add to favourite";
-  heart.classList.add("heart");
-  label.append(heart);
+  favButton.append(heart);
 
-  input.addEventListener("click", () => {
-    if (input.checked) {
-      console.log(input.checked);
-      heart.style.backgroundImage = 'url("../img/heart-filled.svg")';
-    } else {
-      heart.style.backgroundImage = "none";
-    }
-  });
+  favButton.addEventListener("click", () => heart.classList.toggle("heart"));
 }
 
 function createIcon() {
