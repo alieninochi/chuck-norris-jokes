@@ -46,7 +46,7 @@ p {
 
 .joke {
     font-family: Roboto,sans-serif;
-    width: 50vw;
+    width: 50%;
     height: fit-content;
     position: relative;
     left: 10%;
@@ -61,7 +61,7 @@ p {
     position: relative;
     width: 75%;
     left: 20%;
-    top: 6.5em;
+    top: 6em;
     font-size: .625em;
     color: var(--darkgrey);
 }
@@ -80,7 +80,7 @@ p {
     width: 75%;
     position: relative;
     left: 20%;
-    top: 4em;
+    top: 3.5em;
     font-size: 1.125em;
 }
 
@@ -88,7 +88,7 @@ p {
     display: inline-block;
     position: relative;
     left: 20%;
-    top: 6.5em;
+    top: 6em;
     margin: 3em 0 5em 0;
     font-size: .625em;
     color: var(--darkgrey);
@@ -110,8 +110,20 @@ p {
     vertical-align: middle;
 }
 
+.joke-modified {
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 @media screen and (max-width: 1024px) {
     .joke {
         width: 80vw;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 480px) {
+    .joke-modified {
+        width: 80%;
     }
 }

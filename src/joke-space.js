@@ -1,3 +1,5 @@
+import { addJokeToFavourite } from "./fav-section";
+
 const jokeContainer = document.querySelector(".joke-container");
 let jokeSpace;
 
@@ -29,7 +31,8 @@ function createFavIcon() {
   heart.alt = "add to favourite";
   favButton.append(heart);
 
-  favButton.addEventListener("click", () => heart.classList.toggle("heart"));
+  heart.addEventListener("click", () => heart.classList.toggle("heart"));
+  heart.addEventListener("mousedown", addJokeToFavourite);
 }
 
 function createIcon() {

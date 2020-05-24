@@ -162,6 +162,7 @@ h1, h2, p {
   top: 0;
   left: 66%;
   background-color: var(--lightgrey);
+  overflow-y: scroll;
 }
 
 .favourite-header {

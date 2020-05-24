@@ -8,7 +8,7 @@
     }
 
     .favourite-menu {
-        width: 30vw;
+        width: 20vw;
         left: 70%;
     }
 
@@ -34,7 +34,7 @@
 
     .favourite {
         opacity: 0;
-        width: 55vw;
+        width: 70vw;
         height: 100vh;
         position: fixed;
         top: 0;
