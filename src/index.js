@@ -1,7 +1,7 @@
 import { getRandomJoke } from "./random-jokes.js";
 import { getJokeFromSearch } from "./text-search.js";
 import { showCategories, getJokeFromCategory } from "./categories.js";
-import { checkFavs } from "./fav-section.js";
+import { checkFavs, getSavedJokes } from "./fav-section.js";
 
 const gettingJoke = document.querySelector("#get-joke");
 const randomButton = document.querySelector("#random");
@@ -12,7 +12,9 @@ randomButton.addEventListener("click", showCategories);
 categoryButton.addEventListener("click", showCategories);
 searchButton.addEventListener("click", showCategories);
 gettingJoke.addEventListener("click", getJokes);
-gettingJoke.addEventListener("click", () => setTimeout(checkFavs, 1000));
+// gettingJoke.addEventListener("click", () => setTimeout(checkFavs, 1000));
+
+getSavedJokes();
 
 function getJokes() {
   switch (true) {
