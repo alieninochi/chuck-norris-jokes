@@ -48,8 +48,10 @@ function deleteJoke(joke) {
 
 function getSavedJokes() {
   let savedFavJokes = localStorage.getItem("favJoke");
-  savedFavJokes = JSON.parse(savedFavJokes);
-  favSection.innerHTML += savedFavJokes;
+  if (savedFavJokes !== null) {
+    savedFavJokes = JSON.parse(savedFavJokes);
+    favSection.innerHTML += savedFavJokes;
+  }
 }
 
 export { addJokeToFavourite, getSavedJokes };
